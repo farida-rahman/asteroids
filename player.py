@@ -24,7 +24,6 @@ class Player(CircleShape):
         self.rotation += PLAYER_TURN_SPEED * dt
 
     def shoot(self):
-        print('shoot method called!')
         if self.timer > 0:
             return None
         new_shot = Shot(self.position.x, self.position.y, SHOT_RADIUS)

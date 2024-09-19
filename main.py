@@ -43,6 +43,14 @@ def main():
 				sys.exit()
 			else:
 				continue
+		
+		for obj in asteroids:
+			for bullet in shots:
+				if obj.collision(bullet):
+					bullet.kill()
+					obj.split()
+				else:
+					continue
 
 		for drawable in drawables:
 			drawable.draw(screen)
